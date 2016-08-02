@@ -1,0 +1,282 @@
+DEBUG 2016-08-01 17:25:58,285: 	 Executing command: 'submit'
+DEBUG 2016-08-01 17:25:58,286: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 17:25:58,796: 	 Checking credentials
+DEBUG 2016-08-01 17:25:59,135: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:25:59,136: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:26:00,061: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 83049
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:00,983: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 83049
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:00,984: 	 Proxy valid for 23:04:09 hours
+DEBUG 2016-08-01 17:26:00,985: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-08-01 17:26:01,220: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:01,220: 	 Checking credentials
+DEBUG 2016-08-01 17:26:01,220: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:26:01,220: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:26:01,928: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 83048
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:02,667: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 83047
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:02,668: 	 Proxy valid for 23:04:08 hours
+DEBUG 2016-08-01 17:26:03,485: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u30140 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:03,920: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-08-01 17:26:04,055: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:04,056: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-08-01 17:26:04,056: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu_cmsweb.cern.ch for credential name
+DEBUG 2016-08-01 17:26:04,269: 	 Executing : 
+ command : myproxy-info -l aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d -s myproxy.cern.ch
+ output : username: aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:04:17  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:04,270: 	 Myproxy is valid: 2588657
+DEBUG 2016-08-01 17:26:04,270: 	 Command use: submit
+DEBUG 2016-08-01 17:26:04,270: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x25dd810>]
+DEBUG 2016-08-01 17:26:04,807: 	 CRABClient version: 3.3.1607.patch2
+DEBUG 2016-08-01 17:26:04,807: 	 Instance is prod
+DEBUG 2016-08-01 17:26:04,807: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-08-01 17:26:04,807: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-08-01 17:26:04,808: 	 Started submission
+DEBUG 2016-08-01 17:26:04,808: 	 Working on /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+DEBUG 2016-08-01 17:26:05,388: 	 Loading required information from the environment
+DEBUG 2016-08-01 17:26:05,389: 	 Found CMSSW_7_5_8_patch3 for slc6_amd64_gcc491 with base /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3
+DEBUG 2016-08-01 17:26:05,422: 	 UNIQUE NAME: tarUUID 039ffa95-7220-44f2-bcde-bb04b8b797cb 
+DEBUG 2016-08-01 17:26:05,423: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.requestName = 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4'
+config.section_('JobType')
+config.JobType.psetName = 'sc_mixedharmonics_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.inputDataset = '/HIMinimumBias5/davidlw-RecoSkim2015_pprereco_v5-70836070e3530d592901940b96c951fe/USER'
+config.Data.allowNonValidInputDataset = True
+config.Data.publication = False
+config.Data.unitsPerJob = 20
+config.Data.inputDBS = 'phys03'
+config.Data.splitting = 'FileBased'
+config.Data.outputDatasetTag = 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1'
+config.Data.outLFNDirBase = '/store/user/ztu/'
+config.section_('Site')
+config.Site.storageSite = 'T2_US_MIT'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2016-08-01 17:26:05,423: 	 self.config.JobType.psetName: sc_mixedharmonics_cfg.py
+INFO 2016-08-01 17:26:05,423: 	 Importing CMSSW configuration sc_mixedharmonics_cfg.py
+INFO 2016-08-01 17:26:05,489: 	 Finished importing CMSSW configuration sc_mixedharmonics_cfg.py
+DEBUG 2016-08-01 17:26:05,489: 	 Writing CMSSW configuration to /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4/inputs/PSet.py
+DEBUG 2016-08-01 17:26:10,578: 	 The following EDM output files will be collected: []
+DEBUG 2016-08-01 17:26:10,578: 	 The following TFile output files will be collected: ['test.root']
+DEBUG 2016-08-01 17:26:10,578: 	 The following user output files will be collected: []
+DEBUG 2016-08-01 17:26:10,578: 	 Loading required information from the environment
+DEBUG 2016-08-01 17:26:10,578: 	 Found CMSSW_7_5_8_patch3 for slc6_amd64_gcc491 with base /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3
+DEBUG 2016-08-01 17:26:10,578: 	 Making tarball in /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4/inputs/039ffa95-7220-44f2-bcde-bb04b8b797cbdefault.tgz
+DEBUG 2016-08-01 17:26:10,581: 	 Checking directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/lib
+DEBUG 2016-08-01 17:26:10,581: 	 Adding directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/lib to tarball
+DEBUG 2016-08-01 17:26:10,610: 	 Checking directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/biglib
+DEBUG 2016-08-01 17:26:10,610: 	 Adding directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/biglib to tarball
+DEBUG 2016-08-01 17:26:10,611: 	 Checking directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/module
+DEBUG 2016-08-01 17:26:10,635: 	 Adding data directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/interface to tarball
+DEBUG 2016-08-01 17:26:10,637: 	 Adding data directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/data to tarball
+DEBUG 2016-08-01 17:26:11,363: 	 Uploading archive /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4/inputs/039ffa95-7220-44f2-bcde-bb04b8b797cbdefault.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-08-01 17:26:12,681: 	 Loading required information from the environment
+DEBUG 2016-08-01 17:26:12,681: 	 Found CMSSW_7_5_8_patch3 for slc6_amd64_gcc491 with base /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3
+DEBUG 2016-08-01 17:26:12,682: 	 Making tarball in /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4/inputs/debugFiles.tgz
+DEBUG 2016-08-01 17:26:12,816: 	 Uploading archive /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4/inputs/debugFiles.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-08-01 17:26:13,269: 	 Result uploading input files: aba04b00a78304e164df6ff1579082ceb4cc63ca8ac59e2e47c17b775c0d2e7e.tar.gz 
+INFO 2016-08-01 17:26:13,269: 	 Sending the request to the server
+DEBUG 2016-08-01 17:26:13,269: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_US_MIT', 'algoargs': 20, 'cachefilename': 'aba04b00a78304e164df6ff1579082ceb4cc63ca8ac59e2e47c17b775c0d2e7e.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_5_8_patch3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/HIMinimumBias5/davidlw-RecoSkim2015_pprereco_v5-70836070e3530d592901940b96c951fe/USER', 'lfn': '/store/user/ztu/', 'dryrun': 0, 'workflow': 'crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4', 'adduserfiles': [], 'nonprodsw': 1, 'tfileoutfiles': ['test.root'], 'oneEventMode': 0, 'debugfilename': '6531cd146a99ea0d880a54502effcc627a4850d7939f21716a0ce9810afa16db.tar.gz', 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc491', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 1, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1'} 
+DEBUG 2016-08-01 17:26:13,270: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_MIT&algoargs=20&cachefilename=aba04b00a78304e164df6ff1579082ceb4cc63ca8ac59e2e47c17b775c0d2e7e.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_5_8_patch3&primarydataset=&inputdata=%2FHIMinimumBias5%2Fdavidlw-RecoSkim2015_pprereco_v5-70836070e3530d592901940b96c951fe%2FUSER&lfn=%2Fstore%2Fuser%2Fztu%2F&dryrun=0&workflow=crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4&nonprodsw=1&oneEventMode=0&debugfilename=6531cd146a99ea0d880a54502effcc627a4850d7939f21716a0ce9810afa16db.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc491&totalunits=0&splitalgo=FileBased&nonvaliddata=1&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=multicrab_SC_MixedHarmonics_PbPb_m4n2_v1&tfileoutfiles=test.root
+DEBUG 2016-08-01 17:26:13,801: 	 Result: {'result': [{'RequestName': '160801_152613:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4'}]}
+INFO 2016-08-01 17:26:15,315: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-08-01 17:26:15,315: 	 Task name: 160801_152613:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+INFO 2016-08-01 17:26:15,315: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-08-01 17:26:15,315: 	 About to return
+DEBUG 2016-08-01 17:27:00,193: 	 Executing command: 'status'
+DEBUG 2016-08-01 17:27:00,193: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 17:27:00,201: 	 Checking credentials
+DEBUG 2016-08-01 17:27:00,201: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:27:00,201: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:27:01,016: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 82989
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:01,724: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 82988
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:01,724: 	 Proxy valid for 23:03:09 hours
+DEBUG 2016-08-01 17:27:01,856: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:01,856: 	 Checking credentials
+DEBUG 2016-08-01 17:27:01,856: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:27:01,856: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:27:02,678: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 82987
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:03,520: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 82986
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:03,520: 	 Proxy valid for 23:03:07 hours
+DEBUG 2016-08-01 17:27:03,979: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-08-01 17:27:04,095: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:04,095: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-08-01 17:27:04,095: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu_cmsweb.cern.ch for credential name
+DEBUG 2016-08-01 17:27:04,704: 	 Executing : 
+ command : myproxy-info -l aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d -s myproxy.cern.ch
+ output : username: aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:03:17  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:27:04,705: 	 Myproxy is valid: 2588597
+DEBUG 2016-08-01 17:27:04,705: 	 Command use: status
+DEBUG 2016-08-01 17:27:04,705: 	 Options use: ['--dir', 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4']
+DEBUG 2016-08-01 17:27:05,175: 	 CRABClient version: 3.3.1607.patch2
+DEBUG 2016-08-01 17:27:05,175: 	 Instance is prod
+DEBUG 2016-08-01 17:27:05,175: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-08-01 17:27:05,175: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-08-01 17:27:05,175: 	 Looking up detailed status of task 160801_152613:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+DEBUG 2016-08-01 17:27:05,697: 	 {'status': 'QUEUED', 'username': 'ztu', 'totalJobdefs': 0, 'jobsPerStatus': {}, 'taskWarningMsg': [], 'schedd': '', 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'submissionTime': 1470065173, 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': []}
+INFO 2016-08-01 17:27:05,697: 	 CRAB project directory:		/afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+INFO 2016-08-01 17:27:05,697: 	 Task name:			160801_152613:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+INFO 2016-08-01 17:27:05,697: 	 Task status:			QUEUED on command SUBMIT
+INFO 2016-08-01 17:27:05,697: 	 
+No jobs created yet!
+DEBUG 2016-08-01 17:28:38,164: 	 Executing command: 'status'
+DEBUG 2016-08-01 17:28:38,164: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 17:28:38,172: 	 Checking credentials
+DEBUG 2016-08-01 17:28:38,172: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:28:38,172: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:28:39,118: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 82890
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:40,152: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 82889
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:40,152: 	 Proxy valid for 23:01:30 hours
+DEBUG 2016-08-01 17:28:40,285: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:40,286: 	 Checking credentials
+DEBUG 2016-08-01 17:28:40,286: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:28:40,286: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:28:40,897: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 82889
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:41,615: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 82888
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:41,615: 	 Proxy valid for 23:01:29 hours
+DEBUG 2016-08-01 17:28:42,061: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-08-01 17:28:42,176: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:42,176: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-08-01 17:28:42,176: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu_cmsweb.cern.ch for credential name
+DEBUG 2016-08-01 17:28:42,684: 	 Executing : 
+ command : myproxy-info -l aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d -s myproxy.cern.ch
+ output : username: aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:01:39  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:42,684: 	 Myproxy is valid: 2588499
+DEBUG 2016-08-01 17:28:42,684: 	 Command use: status
+DEBUG 2016-08-01 17:28:42,684: 	 Options use: ['--dir', 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4']
+DEBUG 2016-08-01 17:28:43,085: 	 CRABClient version: 3.3.1607.patch2
+DEBUG 2016-08-01 17:28:43,085: 	 Instance is prod
+DEBUG 2016-08-01 17:28:43,085: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-08-01 17:28:43,085: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-08-01 17:28:43,085: 	 Looking up detailed status of task 160801_152613:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+DEBUG 2016-08-01 17:28:46,273: 	 {'status': 'UNKNOWN', 'username': 'ztu', 'totalJobdefs': 0, 'jobsPerStatus': {}, 'taskWarningMsg': [], 'schedd': 'crab3@vocms0106.cern.ch', 'statusFailureMsg': 'Node status file not currently available. Retry in a minute if you just submitted the task.', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'submissionTime': 1470065173, 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': []}
+INFO 2016-08-01 17:28:46,273: 	 CRAB project directory:		/afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+INFO 2016-08-01 17:28:46,273: 	 Task name:			160801_152613:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+INFO 2016-08-01 17:28:46,273: 	 Grid scheduler:			crab3@vocms0106.cern.ch
+INFO 2016-08-01 17:28:46,273: 	 Task status:			UNKNOWN
+INFO 2016-08-01 17:28:46,273: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ztu&table=Mains&pattern=160801_152613%3Aztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_4
+ERROR 2016-08-01 17:28:46,274: 	 Error retrieving task status:	Node status file not currently available. Retry in a minute if you just submitted the task.

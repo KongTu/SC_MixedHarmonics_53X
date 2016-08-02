@@ -1,0 +1,287 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+DEBUG 2016-08-01 17:24:42,896: 	 Executing command: 'submit'
+DEBUG 2016-08-01 17:24:42,922: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 17:24:42,928: 	 Checking credentials
+DEBUG 2016-08-01 17:24:42,928: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:24:42,928: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:24:43,738: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 83126
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:44,446: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 83125
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:44,446: 	 Proxy valid for 23:05:26 hours
+DEBUG 2016-08-01 17:24:44,447: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-08-01 17:24:44,588: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:44,588: 	 Checking credentials
+DEBUG 2016-08-01 17:24:44,588: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:24:44,589: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:24:45,408: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 83124
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:46,215: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 83123
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:46,215: 	 Proxy valid for 23:05:24 hours
+DEBUG 2016-08-01 17:24:46,829: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u30140 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:47,241: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-08-01 17:24:47,352: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:47,353: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-08-01 17:24:47,353: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu_cmsweb.cern.ch for credential name
+DEBUG 2016-08-01 17:24:47,556: 	 Executing : 
+ command : myproxy-info -l aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d -s myproxy.cern.ch
+ output : username: aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:05:34  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:24:47,558: 	 Myproxy is valid: 2588734
+DEBUG 2016-08-01 17:24:47,558: 	 Command use: submit
+DEBUG 2016-08-01 17:24:47,558: 	 Options use: ['--config', <WMCore.Configuration.Configuration object at 0x25dd810>]
+DEBUG 2016-08-01 17:24:48,026: 	 CRABClient version: 3.3.1607.patch2
+DEBUG 2016-08-01 17:24:48,026: 	 Instance is prod
+DEBUG 2016-08-01 17:24:48,026: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-08-01 17:24:48,026: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-08-01 17:24:48,026: 	 Started submission
+DEBUG 2016-08-01 17:24:48,026: 	 Working on /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+DEBUG 2016-08-01 17:24:48,632: 	 Loading required information from the environment
+DEBUG 2016-08-01 17:24:48,632: 	 Found CMSSW_7_5_8_patch3 for slc6_amd64_gcc491 with base /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3
+DEBUG 2016-08-01 17:24:48,699: 	 UNIQUE NAME: tarUUID 23138c5a-ed4a-45c9-9bae-890ebf6524df 
+DEBUG 2016-08-01 17:24:48,699: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.requestName = 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0'
+config.section_('JobType')
+config.JobType.psetName = 'sc_mixedharmonics_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.inputDataset = '/HIMinimumBias5/davidlw-RecoSkim2015_pprereco_v5-70836070e3530d592901940b96c951fe/USER'
+config.Data.allowNonValidInputDataset = True
+config.Data.publication = False
+config.Data.unitsPerJob = 20
+config.Data.inputDBS = 'phys03'
+config.Data.splitting = 'FileBased'
+config.Data.outputDatasetTag = 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1'
+config.Data.outLFNDirBase = '/store/user/ztu/'
+config.section_('Site')
+config.Site.storageSite = 'T2_US_MIT'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2016-08-01 17:24:48,699: 	 self.config.JobType.psetName: sc_mixedharmonics_cfg.py
+INFO 2016-08-01 17:24:48,700: 	 Importing CMSSW configuration sc_mixedharmonics_cfg.py
+INFO 2016-08-01 17:24:55,406: 	 Finished importing CMSSW configuration sc_mixedharmonics_cfg.py
+DEBUG 2016-08-01 17:24:55,406: 	 Writing CMSSW configuration to /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0/inputs/PSet.py
+DEBUG 2016-08-01 17:25:00,878: 	 The following EDM output files will be collected: []
+DEBUG 2016-08-01 17:25:00,878: 	 The following TFile output files will be collected: ['test.root']
+DEBUG 2016-08-01 17:25:00,878: 	 The following user output files will be collected: []
+DEBUG 2016-08-01 17:25:00,878: 	 Loading required information from the environment
+DEBUG 2016-08-01 17:25:00,878: 	 Found CMSSW_7_5_8_patch3 for slc6_amd64_gcc491 with base /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3
+DEBUG 2016-08-01 17:25:00,878: 	 Making tarball in /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0/inputs/23138c5a-ed4a-45c9-9bae-890ebf6524dfdefault.tgz
+DEBUG 2016-08-01 17:25:01,057: 	 Checking directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/lib
+DEBUG 2016-08-01 17:25:01,057: 	 Adding directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/lib to tarball
+DEBUG 2016-08-01 17:25:01,102: 	 Checking directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/biglib
+DEBUG 2016-08-01 17:25:01,102: 	 Adding directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/biglib to tarball
+DEBUG 2016-08-01 17:25:01,105: 	 Checking directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/module
+DEBUG 2016-08-01 17:25:01,528: 	 Adding data directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/interface to tarball
+DEBUG 2016-08-01 17:25:01,533: 	 Adding data directory /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/data to tarball
+DEBUG 2016-08-01 17:25:02,259: 	 Uploading archive /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0/inputs/23138c5a-ed4a-45c9-9bae-890ebf6524dfdefault.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-08-01 17:25:03,752: 	 Loading required information from the environment
+DEBUG 2016-08-01 17:25:03,752: 	 Found CMSSW_7_5_8_patch3 for slc6_amd64_gcc491 with base /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3
+DEBUG 2016-08-01 17:25:03,752: 	 Making tarball in /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0/inputs/debugFiles.tgz
+DEBUG 2016-08-01 17:25:03,769: 	 Uploading archive /afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0/inputs/debugFiles.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-08-01 17:25:04,261: 	 Result uploading input files: cf70913b120b7d0b25ca4f6f888d3b9b913f087994b6a64d3ed2b888dfc86a08.tar.gz 
+INFO 2016-08-01 17:25:04,262: 	 Sending the request to the server
+DEBUG 2016-08-01 17:25:04,262: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T2_US_MIT', 'algoargs': 20, 'cachefilename': 'cf70913b120b7d0b25ca4f6f888d3b9b913f087994b6a64d3ed2b888dfc86a08.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_5_8_patch3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/HIMinimumBias5/davidlw-RecoSkim2015_pprereco_v5-70836070e3530d592901940b96c951fe/USER', 'lfn': '/store/user/ztu/', 'dryrun': 0, 'workflow': 'crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0', 'adduserfiles': [], 'nonprodsw': 1, 'tfileoutfiles': ['test.root'], 'oneEventMode': 0, 'debugfilename': '219f5c479a3557a15a670b57c42326c5d333a6d736654f00c43ca62a17f3460d.tar.gz', 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc491', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 1, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1'} 
+DEBUG 2016-08-01 17:25:04,262: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T2_US_MIT&algoargs=20&cachefilename=cf70913b120b7d0b25ca4f6f888d3b9b913f087994b6a64d3ed2b888dfc86a08.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_5_8_patch3&primarydataset=&inputdata=%2FHIMinimumBias5%2Fdavidlw-RecoSkim2015_pprereco_v5-70836070e3530d592901940b96c951fe%2FUSER&lfn=%2Fstore%2Fuser%2Fztu%2F&dryrun=0&workflow=crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0&nonprodsw=1&oneEventMode=0&debugfilename=219f5c479a3557a15a670b57c42326c5d333a6d736654f00c43ca62a17f3460d.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc491&totalunits=0&splitalgo=FileBased&nonvaliddata=1&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=multicrab_SC_MixedHarmonics_PbPb_m4n2_v1&tfileoutfiles=test.root
+DEBUG 2016-08-01 17:25:04,799: 	 Result: {'result': [{'RequestName': '160801_152504:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0'}]}
+INFO 2016-08-01 17:25:04,807: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-08-01 17:25:04,807: 	 Task name: 160801_152504:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+INFO 2016-08-01 17:25:04,807: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-08-01 17:25:04,807: 	 About to return
+DEBUG 2016-08-01 17:26:36,103: 	 Executing command: 'status'
+DEBUG 2016-08-01 17:26:36,124: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 17:26:36,130: 	 Checking credentials
+DEBUG 2016-08-01 17:26:36,131: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:26:36,131: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:26:37,636: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 83012
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:39,551: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 83011
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:39,551: 	 Proxy valid for 23:03:32 hours
+DEBUG 2016-08-01 17:26:39,664: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:39,664: 	 Checking credentials
+DEBUG 2016-08-01 17:26:39,665: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:26:39,665: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:26:40,273: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 83009
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:41,885: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 83008
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:41,885: 	 Proxy valid for 23:03:29 hours
+DEBUG 2016-08-01 17:26:42,324: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-08-01 17:26:42,432: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:42,433: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-08-01 17:26:42,433: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu_cmsweb.cern.ch for credential name
+DEBUG 2016-08-01 17:26:42,937: 	 Executing : 
+ command : myproxy-info -l aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d -s myproxy.cern.ch
+ output : username: aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:03:39  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:26:42,938: 	 Myproxy is valid: 2588619
+DEBUG 2016-08-01 17:26:42,938: 	 Command use: status
+DEBUG 2016-08-01 17:26:42,938: 	 Options use: ['--dir', 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0']
+DEBUG 2016-08-01 17:26:43,409: 	 CRABClient version: 3.3.1607.patch2
+DEBUG 2016-08-01 17:26:43,409: 	 Instance is prod
+DEBUG 2016-08-01 17:26:43,409: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-08-01 17:26:43,409: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-08-01 17:26:43,409: 	 Looking up detailed status of task 160801_152504:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+DEBUG 2016-08-01 17:26:43,833: 	 {'status': 'QUEUED', 'username': 'ztu', 'totalJobdefs': 0, 'jobsPerStatus': {}, 'taskWarningMsg': [], 'schedd': '', 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'submissionTime': 1470065104, 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': []}
+INFO 2016-08-01 17:26:43,833: 	 CRAB project directory:		/afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+INFO 2016-08-01 17:26:43,833: 	 Task name:			160801_152504:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+INFO 2016-08-01 17:26:43,833: 	 Task status:			QUEUED on command SUBMIT
+INFO 2016-08-01 17:26:43,833: 	 
+No jobs created yet!
+DEBUG 2016-08-01 17:28:00,983: 	 Executing command: 'status'
+DEBUG 2016-08-01 17:28:00,994: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 17:28:01,054: 	 Checking credentials
+DEBUG 2016-08-01 17:28:01,054: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:28:01,054: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:28:01,760: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 82928
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:02,491: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 82927
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:02,492: 	 Proxy valid for 23:02:08 hours
+DEBUG 2016-08-01 17:28:02,640: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:02,641: 	 Checking credentials
+DEBUG 2016-08-01 17:28:02,641: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 17:28:02,641: 	 Getting proxy life time left
+DEBUG 2016-08-01 17:28:03,571: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 82926
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:04,491: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 82925
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:04,491: 	 Proxy valid for 23:02:06 hours
+DEBUG 2016-08-01 17:28:05,208: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+DEBUG 2016-08-01 17:28:05,321: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:05,322: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-08-01 17:28:05,322: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu_cmsweb.cern.ch for credential name
+DEBUG 2016-08-01 17:28:08,252: 	 Executing : 
+ command : myproxy-info -l aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d -s myproxy.cern.ch
+ output : username: aeeb635c02ab2354cd0696fedaf0d9122a1d7b0d
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ztu/CN=732466/CN=Zhoudunming Tu
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108).cern.ch
+  timeleft: 719:02:13  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 17:28:08,253: 	 Myproxy is valid: 2588533
+DEBUG 2016-08-01 17:28:08,253: 	 Command use: status
+DEBUG 2016-08-01 17:28:08,253: 	 Options use: ['--dir', 'multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0']
+DEBUG 2016-08-01 17:28:08,679: 	 CRABClient version: 3.3.1607.patch2
+DEBUG 2016-08-01 17:28:08,679: 	 Instance is prod
+DEBUG 2016-08-01 17:28:08,679: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-08-01 17:28:08,679: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-08-01 17:28:08,679: 	 Looking up detailed status of task 160801_152504:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+DEBUG 2016-08-01 17:28:14,106: 	 {'status': 'SUBMITTED', 'username': 'ztu', 'jobsPerStatus': {'idle': 200, 'unsubmitted': 61}, 'jobs': {'216': {'State': 'unsubmitted'}, '217': {'State': 'unsubmitted'}, '214': {'State': 'unsubmitted'}, '215': {'State': 'unsubmitted'}, '212': {'State': 'unsubmitted'}, '213': {'State': 'unsubmitted'}, '210': {'State': 'unsubmitted'}, '211': {'State': 'unsubmitted'}, '218': {'State': 'unsubmitted'}, '219': {'State': 'unsubmitted'}, '133': {'State': 'idle'}, '132': {'State': 'idle'}, '131': {'State': 'idle'}, '130': {'State': 'idle'}, '137': {'State': 'idle'}, '136': {'State': 'idle'}, '135': {'State': 'idle'}, '134': {'State': 'idle'}, '95': {'State': 'idle'}, '139': {'State': 'idle'}, '138': {'State': 'idle'}, '225': {'State': 'unsubmitted'}, '24': {'State': 'idle'}, '25': {'State': 'idle'}, '26': {'State': 'idle'}, '27': {'State': 'idle'}, '20': {'State': 'idle'}, '21': {'State': 'unsubmitted'}, '22': {'State': 'idle'}, '23': {'State': 'idle'}, '223': {'State': 'unsubmitted'}, '28': {'State': 'idle'}, '29': {'State': 'idle'}, '222': {'State': 'unsubmitted'}, '4': {'State': 'idle'}, '8': {'State': 'idle'}, '220': {'State': 'unsubmitted'}, '68': {'State': 'idle'}, '227': {'State': 'unsubmitted'}, '120': {'State': 'idle'}, '121': {'State': 'idle'}, '122': {'State': 'idle'}, '123': {'State': 'idle'}, '124': {'State': 'idle'}, '125': {'State': 'idle'}, '126': {'State': 'idle'}, '127': {'State': 'idle'}, '128': {'State': 'idle'}, '129': {'State': 'idle'}, '69': {'State': 'idle'}, '91': {'State': 'idle'}, '59': {'State': 'idle'}, '58': {'State': 'idle'}, '55': {'State': 'idle'}, '54': {'State': 'idle'}, '57': {'State': 'idle'}, '56': {'State': 'idle'}, '51': {'State': 'idle'}, '50': {'State': 'idle'}, '53': {'State': 'idle'}, '52': {'State': 'idle'}, '63': {'State': 'idle'}, '145': {'State': 'idle'}, '90': {'State': 'idle'}, '93': {'State': 'idle'}, '199': {'State': 'idle'}, '198': {'State': 'idle'}, '147': {'State': 'idle'}, '195': {'State': 'idle'}, '194': {'State': 'idle'}, '197': {'State': 'idle'}, '67': {'State': 'idle'}, '191': {'State': 'idle'}, '190': {'State': 'idle'}, '193': {'State': 'idle'}, '192': {'State': 'idle'}, '115': {'State': 'idle'}, '114': {'State': 'idle'}, '88': {'State': 'idle'}, '89': {'State': 'idle'}, '111': {'State': 'idle'}, '110': {'State': 'idle'}, '113': {'State': 'idle'}, '112': {'State': 'idle'}, '82': {'State': 'idle'}, '83': {'State': 'idle'}, '80': {'State': 'idle'}, '81': {'State': 'idle'}, '119': {'State': 'idle'}, '118': {'State': 'idle'}, '84': {'State': 'idle'}, '85': {'State': 'idle'}, '174': {'State': 'idle'}, '140': {'State': 'idle'}, '173': {'State': 'idle'}, '141': {'State': 'idle'}, '226': {'State': 'unsubmitted'}, '172': {'State': 'idle'}, '3': {'State': 'idle'}, '171': {'State': 'idle'}, '7': {'State': 'idle'}, '146': {'State': 'idle'}, '92': {'State': 'idle'}, '170': {'State': 'idle'}, '245': {'State': 'unsubmitted'}, '244': {'State': 'unsubmitted'}, '247': {'State': 'unsubmitted'}, '109': {'State': 'idle'}, '241': {'State': 'unsubmitted'}, '240': {'State': 'unsubmitted'}, '243': {'State': 'unsubmitted'}, '242': {'State': 'unsubmitted'}, '102': {'State': 'unsubmitted'}, '103': {'State': 'idle'}, '100': {'State': 'idle'}, '101': {'State': 'idle'}, '106': {'State': 'idle'}, '107': {'State': 'idle'}, '104': {'State': 'idle'}, '105': {'State': 'idle'}, '39': {'State': 'idle'}, '38': {'State': 'idle'}, '33': {'State': 'idle'}, '32': {'State': 'idle'}, '31': {'State': 'idle'}, '30': {'State': 'idle'}, '37': {'State': 'idle'}, '108': {'State': 'idle'}, '35': {'State': 'idle'}, '34': {'State': 'idle'}, '246': {'State': 'unsubmitted'}, '94': {'State': 'idle'}, '252': {'State': 'unsubmitted'}, '60': {'State': 'idle'}, '61': {'State': 'idle'}, '258': {'State': 'unsubmitted'}, '259': {'State': 'unsubmitted'}, '64': {'State': 'idle'}, '65': {'State': 'idle'}, '179': {'State': 'idle'}, '178': {'State': 'idle'}, '177': {'State': 'idle'}, '176': {'State': 'idle'}, '175': {'State': 'idle'}, '251': {'State': 'unsubmitted'}, '256': {'State': 'unsubmitted'}, '257': {'State': 'unsubmitted'}, '254': {'State': 'unsubmitted'}, '255': {'State': 'unsubmitted'}, '249': {'State': 'unsubmitted'}, '253': {'State': 'unsubmitted'}, '248': {'State': 'unsubmitted'}, '182': {'State': 'idle'}, '183': {'State': 'unsubmitted'}, '180': {'State': 'idle'}, '181': {'State': 'idle'}, '186': {'State': 'idle'}, '187': {'State': 'idle'}, '184': {'State': 'idle'}, '6': {'State': 'idle'}, '188': {'State': 'idle'}, '189': {'State': 'idle'}, '196': {'State': 'idle'}, '221': {'State': 'unsubmitted'}, '97': {'State': 'idle'}, '185': {'State': 'idle'}, '142': {'State': 'idle'}, '99': {'State': 'idle'}, '98': {'State': 'idle'}, '168': {'State': 'idle'}, '169': {'State': 'idle'}, '229': {'State': 'unsubmitted'}, '228': {'State': 'unsubmitted'}, '164': {'State': 'idle'}, '165': {'State': 'idle'}, '166': {'State': 'idle'}, '167': {'State': 'idle'}, '160': {'State': 'idle'}, '161': {'State': 'idle'}, '162': {'State': 'idle'}, '163': {'State': 'idle'}, '11': {'State': 'idle'}, '10': {'State': 'idle'}, '13': {'State': 'idle'}, '12': {'State': 'idle'}, '15': {'State': 'idle'}, '14': {'State': 'idle'}, '66': {'State': 'idle'}, '16': {'State': 'idle'}, '19': {'State': 'idle'}, '18': {'State': 'idle'}, '143': {'State': 'idle'}, '117': {'State': 'idle'}, '116': {'State': 'idle'}, '17': {'State': 'idle'}, '151': {'State': 'idle'}, '150': {'State': 'idle'}, '153': {'State': 'idle'}, '152': {'State': 'idle'}, '155': {'State': 'idle'}, '250': {'State': 'unsubmitted'}, '157': {'State': 'idle'}, '156': {'State': 'idle'}, '159': {'State': 'idle'}, '158': {'State': 'idle'}, '62': {'State': 'idle'}, '36': {'State': 'idle'}, '238': {'State': 'unsubmitted'}, '239': {'State': 'unsubmitted'}, '234': {'State': 'unsubmitted'}, '235': {'State': 'unsubmitted'}, '236': {'State': 'unsubmitted'}, '237': {'State': 'unsubmitted'}, '230': {'State': 'unsubmitted'}, '231': {'State': 'unsubmitted'}, '232': {'State': 'unsubmitted'}, '233': {'State': 'unsubmitted'}, '224': {'State': 'unsubmitted'}, '48': {'State': 'idle'}, '49': {'State': 'idle'}, '46': {'State': 'idle'}, '86': {'State': 'idle'}, '44': {'State': 'idle'}, '45': {'State': 'idle'}, '42': {'State': 'idle'}, '43': {'State': 'idle'}, '40': {'State': 'idle'}, '87': {'State': 'idle'}, '1': {'State': 'idle'}, '5': {'State': 'idle'}, '9': {'State': 'idle'}, '201': {'State': 'idle'}, '200': {'State': 'idle'}, '203': {'State': 'idle'}, '202': {'State': 'idle'}, '205': {'State': 'unsubmitted'}, '204': {'State': 'unsubmitted'}, '207': {'State': 'unsubmitted'}, '206': {'State': 'unsubmitted'}, '209': {'State': 'unsubmitted'}, '208': {'State': 'unsubmitted'}, '148': {'State': 'idle'}, '149': {'State': 'idle'}, '77': {'State': 'idle'}, '76': {'State': 'idle'}, '75': {'State': 'idle'}, '74': {'State': 'idle'}, '73': {'State': 'idle'}, '72': {'State': 'idle'}, '71': {'State': 'idle'}, '70': {'State': 'idle'}, '154': {'State': 'idle'}, '96': {'State': 'idle'}, '79': {'State': 'idle'}, '78': {'State': 'idle'}, '2': {'State': 'idle'}, '144': {'State': 'idle'}, '261': {'State': 'unsubmitted'}, '41': {'State': 'idle'}, '260': {'State': 'unsubmitted'}, '47': {'State': 'idle'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'schedd': 'crab3@submit-1.t2.ucsd.edu', 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'command': 'SUBMIT', 'totalJobdefs': 0, 'submissionTime': 1470065104, 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['unsubmitted', 216], ['unsubmitted', 217], ['unsubmitted', 214], ['unsubmitted', 215], ['unsubmitted', 212], ['unsubmitted', 213], ['unsubmitted', 210], ['unsubmitted', 211], ['idle', 165], ['unsubmitted', 218], ['idle', 133], ['idle', 132], ['idle', 131], ['idle', 130], ['idle', 137], ['idle', 136], ['idle', 135], ['idle', 134], ['idle', 139], ['idle', 138], ['idle', 166], ['idle', 24], ['idle', 25], ['idle', 26], ['idle', 27], ['idle', 20], ['unsubmitted', 21], ['idle', 22], ['idle', 23], ['idle', 160], ['idle', 28], ['idle', 29], ['idle', 161], ['idle', 4], ['idle', 8], ['idle', 163], ['idle', 119], ['unsubmitted', 258], ['idle', 120], ['idle', 121], ['idle', 122], ['idle', 123], ['idle', 124], ['idle', 125], ['idle', 126], ['idle', 127], ['idle', 128], ['idle', 129], ['unsubmitted', 219], ['idle', 167], ['idle', 118], ['idle', 59], ['idle', 58], ['idle', 55], ['idle', 54], ['idle', 57], ['idle', 56], ['idle', 51], ['idle', 50], ['idle', 53], ['idle', 52], ['unsubmitted', 259], ['idle', 164], ['idle', 201], ['idle', 199], ['idle', 179], ['idle', 200], ['idle', 195], ['idle', 194], ['idle', 197], ['idle', 178], ['idle', 191], ['idle', 190], ['idle', 193], ['idle', 192], ['idle', 115], ['idle', 114], ['idle', 88], ['idle', 89], ['idle', 111], ['idle', 110], ['idle', 113], ['idle', 112], ['idle', 82], ['idle', 83], ['idle', 80], ['idle', 81], ['idle', 86], ['idle', 87], ['idle', 84], ['idle', 85], ['unsubmitted', 251], ['idle', 198], ['unsubmitted', 256], ['unsubmitted', 206], ['unsubmitted', 226], ['unsubmitted', 257], ['idle', 3], ['idle', 177], ['unsubmitted', 254], ['idle', 7], ['unsubmitted', 247], ['unsubmitted', 255], ['unsubmitted', 225], ['unsubmitted', 245], ['unsubmitted', 244], ['idle', 108], ['idle', 109], ['unsubmitted', 241], ['unsubmitted', 240], ['unsubmitted', 243], ['unsubmitted', 242], ['unsubmitted', 102], ['idle', 103], ['idle', 100], ['idle', 101], ['idle', 106], ['idle', 107], ['idle', 104], ['idle', 105], ['idle', 39], ['idle', 38], ['idle', 33], ['idle', 32], ['idle', 31], ['idle', 30], ['idle', 37], ['idle', 36], ['idle', 35], ['idle', 34], ['unsubmitted', 246], ['unsubmitted', 252], ['unsubmitted', 205], ['unsubmitted', 223], ['idle', 176], ['idle', 60], ['idle', 61], ['idle', 62], ['idle', 63], ['idle', 64], ['idle', 65], ['idle', 66], ['idle', 67], ['idle', 68], ['idle', 69], ['idle', 175], ['idle', 174], ['idle', 173], ['idle', 172], ['idle', 171], ['idle', 170], ['idle', 203], ['unsubmitted', 222], ['idle', 181], ['unsubmitted', 253], ['unsubmitted', 248], ['idle', 182], ['unsubmitted', 183], ['idle', 180], ['idle', 2], ['idle', 162], ['idle', 187], ['idle', 184], ['idle', 6], ['unsubmitted', 220], ['idle', 186], ['idle', 188], ['idle', 189], ['idle', 202], ['idle', 196], ['unsubmitted', 221], ['idle', 185], ['idle', 99], ['idle', 98], ['idle', 168], ['idle', 169], ['unsubmitted', 229], ['unsubmitted', 228], ['idle', 91], ['idle', 90], ['idle', 93], ['idle', 92], ['idle', 95], ['idle', 94], ['idle', 97], ['idle', 96], ['idle', 11], ['idle', 10], ['idle', 13], ['idle', 12], ['idle', 15], ['idle', 14], ['idle', 17], ['idle', 16], ['idle', 19], ['idle', 18], ['idle', 117], ['unsubmitted', 250], ['idle', 116], ['unsubmitted', 204], ['idle', 151], ['idle', 150], ['idle', 153], ['idle', 152], ['idle', 155], ['idle', 154], ['idle', 157], ['idle', 156], ['idle', 159], ['idle', 158], ['unsubmitted', 234], ['unsubmitted', 238], ['unsubmitted', 239], ['unsubmitted', 207], ['unsubmitted', 235], ['unsubmitted', 236], ['unsubmitted', 237], ['unsubmitted', 230], ['unsubmitted', 231], ['unsubmitted', 232], ['unsubmitted', 233], ['unsubmitted', 224], ['idle', 48], ['idle', 49], ['idle', 46], ['idle', 47], ['idle', 44], ['idle', 45], ['idle', 42], ['idle', 43], ['idle', 40], ['idle', 41], ['idle', 1], ['idle', 5], ['idle', 9], ['idle', 146], ['idle', 147], ['idle', 144], ['idle', 145], ['idle', 142], ['idle', 143], ['idle', 140], ['idle', 141], ['unsubmitted', 209], ['unsubmitted', 208], ['idle', 148], ['idle', 149], ['idle', 77], ['idle', 76], ['idle', 75], ['idle', 74], ['idle', 73], ['idle', 72], ['idle', 71], ['idle', 70], ['idle', 79], ['idle', 78], ['unsubmitted', 249], ['unsubmitted', 227], ['unsubmitted', 261], ['unsubmitted', 260]]}
+INFO 2016-08-01 17:28:14,106: 	 CRAB project directory:		/afs/cern.ch/work/z/ztu/SC_MixedCorrelator/CMSSW_7_5_8_patch3/src/SC_MixedHarmonics/SC_MixedHarmonics/test/multicrab_SC_MixedHarmonics_PbPb_m4n2_v1/crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+INFO 2016-08-01 17:28:14,106: 	 Task name:			160801_152504:ztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+INFO 2016-08-01 17:28:14,106: 	 Grid scheduler:			crab3@submit-1.t2.ucsd.edu
+INFO 2016-08-01 17:28:14,106: 	 Task status:			SUBMITTED
+INFO 2016-08-01 17:28:14,106: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ztu&table=Mains&pattern=160801_152504%3Aztu_crab_multicrab_SC_MixedHarmonics_PbPb_m4n2_v1_0
+INFO 2016-08-01 17:28:14,106: 	 
+Jobs status:			idle           76.6% (200/261)
+INFO 2016-08-01 17:28:14,106: 	 				unsubmitted    23.4% ( 61/261)
+INFO 2016-08-01 17:28:14,107: 	 
+No publication information (publication has been disabled in the CRAB configuration file)

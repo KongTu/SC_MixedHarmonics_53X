@@ -1,0 +1,19 @@
+DEBUG 2016-08-01 16:30:35,044: 	 Executing command: 'submit'
+DEBUG 2016-08-01 16:30:35,044: 	 Found CRAB cache file /afs/cern.ch/user/z/ztu/.crab3
+DEBUG 2016-08-01 16:30:35,048: 	 Checking credentials
+DEBUG 2016-08-01 16:30:35,048: 	 Found proxy file /tmp/x509up_u30140
+DEBUG 2016-08-01 16:30:35,048: 	 Getting proxy life time left
+DEBUG 2016-08-01 16:30:35,777: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -timeleft
+ output : 86374
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 16:30:36,283: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u30140 -actimeleft
+ output : 86373
+
+ error: 
+ retcode : 0
+DEBUG 2016-08-01 16:30:36,284: 	 Proxy valid for 23:59:34 hours
+DEBUG 2016-08-01 16:30:36,284: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
