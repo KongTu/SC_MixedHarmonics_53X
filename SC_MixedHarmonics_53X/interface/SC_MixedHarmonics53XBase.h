@@ -1,5 +1,5 @@
-#ifndef SC_MixedHarmonicsBase_
-#define SC_MixedHarmonicsBase_
+#ifndef SC_MixedHarmonics_53XBase_
+#define SC_MixedHarmonics_53XBase_
 
 
 #include <memory>
@@ -138,10 +138,10 @@ using namespace reco;
 using namespace edm;
 
 
-class SC_MixedHarmonics : public edm::EDAnalyzer {
+class SC_MixedHarmonics_53X : public edm::EDAnalyzer {
    public:
-      explicit SC_MixedHarmonics(const edm::ParameterSet&);
-      ~SC_MixedHarmonics();
+      explicit SC_MixedHarmonics_53X(const edm::ParameterSet&);
+      ~SC_MixedHarmonics_53X();
 
       static void fillDescriptions(edm::ConfigurationDescriptions& descriptions);
 
@@ -157,18 +157,12 @@ class SC_MixedHarmonics : public edm::EDAnalyzer {
       virtual TComplex q_vector(double n, double p, double w, double phi);
 
       // ----------member data ---------------------------
-      edm::EDGetTokenT<reco::VertexCollection> vertexSrc_;
-      edm::EDGetTokenT<reco::TrackCollection> trackSrc_;
-      edm::EDGetTokenT<CaloTowerCollection> towerSrc_;
-      edm::EDGetTokenT<reco::GenParticleCollection> genSrc_;
-
-      edm::InputTag vertexName_;
-      edm::InputTag trackName_;
-      edm::InputTag pfCandName_;
-      edm::InputTag towerName_;
+      edm::InputTag vertexSrc_;
+      edm::InputTag trackSrc_;
+      edm::InputTag towerSrc_;
 
       //correction table
-      TH2D* effTable[5];
+      TH2D* effTable;
 
       TH1D* c2_k;
       TH1D* c2_m;

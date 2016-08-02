@@ -20,21 +20,6 @@ process.load("SimGeneral.MixingModule.mixNoPU_cfi")
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 process.load('HeavyIonsAnalysis.Configuration.collisionEventSelection_cff')
 process.load('Configuration.EventContent.EventContentHeavyIons_cff')
-process.GlobalTag.globaltag = '75X_dataRun2_PromptHI_v3'
-
-process.PAprimaryVertexFilter = cms.EDFilter("VertexSelector",
-    src = cms.InputTag("offlinePrimaryVertices"),
-    cut = cms.string("!isFake && abs(z) <= 25 && position.Rho <= 2 && tracksSize >= 2"),
-    filter = cms.bool(True),   # otherwise it won't filter the events
-)
-
-#Reject beam scraping events standard pp configuration
-process.NoScraping = cms.EDFilter("FilterOutScraping",
-    applyfilter = cms.untracked.bool(True),
-    debugOn = cms.untracked.bool(False),
-    numtrack = cms.untracked.uint32(10),
-    thresh = cms.untracked.double(0.25)
-)
 
 process.source = cms.Source("PoolSource",
     # replace 'myfile.root' with the source file you want to use
@@ -44,7 +29,7 @@ process.source = cms.Source("PoolSource",
 )
 )
 
-process.load("SC_MixedHarmonics.SC_MixedHarmonics.sc_mixedharmonics_cfi")
+process.load("SC_MixedHarmonics_53X.SC_MixedHarmonics_53X.sc_mixedharmonics_53x_cfi")
 
 #define the cuts
 process.ana_m3n2 = process.ana.clone()
@@ -73,8 +58,4 @@ process.ana_m4n2.ptHigh = 5.0
 process.ana_m4n2.etaTracker = 0.8
 
 process.TFileService = cms.Service("TFileService",fileName = cms.string("test.root"))
-process.p = cms.Path(  #process.hfCoincFilter3 *
-                       #process.PAprimaryVertexFilter *
-                       #process.NoScraping *
-                        process.ana_m3n2 * 
-		        process.ana_m4n2)
+process.p = cms.Path( process.ana_m3n2 * process.ana_m4n2)

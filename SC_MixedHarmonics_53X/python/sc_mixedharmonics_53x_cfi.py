@@ -12,10 +12,10 @@ hltHM.HLTPaths = ['HLT_PAPixelTracks_Multiplicity100_v*',
 hltHM.andOr = cms.bool(True)
 hltHM.throw = cms.bool(False)
 				
-ana = cms.EDAnalyzer('SC_MixedHarmonics',
-                                                  vertexName = cms.InputTag('offlinePrimaryVertices'),
-                		  		  trackName = cms.InputTag('generalTracks'),
-                                                  towerName = cms.InputTag("towerMaker"),
+ana = cms.EDAnalyzer('SC_MixedHarmonics_53X',
+                                                  vertexSrc = cms.InputTag('offlinePrimaryVertices'),
+                		  		  trackSrc = cms.InputTag('generalTracks'),
+                                                  towerSrc = cms.InputTag("towerMaker"),
                                                   offlineDCA = cms.untracked.double(3.0),
                                                   offlineptErr = cms.untracked.double(0.1),
 				  		  offlinenhits = cms.untracked.double(0),

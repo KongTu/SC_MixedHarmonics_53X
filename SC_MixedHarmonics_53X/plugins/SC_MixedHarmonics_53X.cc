@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    SC_MixedHarmonics/SC_MixedHarmonics
-// Class:      SC_MixedHarmonics
+// Package:    SC_MixedHarmonics_53X/SC_MixedHarmonics_53X
+// Class:      SC_MixedHarmonics_53X
 // 
-/**\class SC_MixedHarmonics SC_MixedHarmonics.cc SC_MixedHarmonics/SC_MixedHarmonics/plugins/SC_MixedHarmonics.cc
+/**\class SC_MixedHarmonics_53X SC_MixedHarmonics_53X.cc SC_MixedHarmonics_53X/SC_MixedHarmonics_53X/plugins/SC_MixedHarmonics_53X.cc
 
  Description: [one line class summary]
 
@@ -17,19 +17,15 @@
 //
 
 
-#include "SC_MixedHarmonics/SC_MixedHarmonics/interface/SC_MixedHarmonicsBase.h"
+#include "SC_MixedHarmonics_53X/SC_MixedHarmonics_53X/interface/SC_MixedHarmonics_53XBase.h"
 
 
-SC_MixedHarmonics::SC_MixedHarmonics(const edm::ParameterSet& iConfig)
+SC_MixedHarmonics_53X::SC_MixedHarmonics_53X(const edm::ParameterSet& iConfig)
 {
 
-  trackName_  =  iConfig.getParameter<edm::InputTag>("trackName");
-  vertexName_ =  iConfig.getParameter<edm::InputTag>("vertexName");
-  towerName_ =  iConfig.getParameter<edm::InputTag>("towerName");
-
-  trackSrc_ = consumes<reco::TrackCollection>(trackName_);
-  vertexSrc_ = consumes<reco::VertexCollection>(vertexName_);
-  towerSrc_ = consumes<CaloTowerCollection>(towerName_);
+  trackSrc_ = iConfig.getParameter<edm::InputTag>("trackSrc");
+  vertexSrc_ = iConfig.getParameter<std::string>("vertexSrc");
+  towerSrc_ = iConfig.getParameter<edm::InputTag>("towerSrc");
 
   Nmin_ = iConfig.getUntrackedParameter<int>("Nmin");
   Nmax_ = iConfig.getUntrackedParameter<int>("Nmax");
@@ -72,7 +68,7 @@ SC_MixedHarmonics::SC_MixedHarmonics(const edm::ParameterSet& iConfig)
 }
 
 
-SC_MixedHarmonics::~SC_MixedHarmonics()
+SC_MixedHarmonics_53X::~SC_MixedHarmonics_53X()
 {
  
    // do anything here that needs to be done at desctruction time
@@ -87,13 +83,13 @@ SC_MixedHarmonics::~SC_MixedHarmonics()
 
 // ------------ method called for each event  ------------
 void
-SC_MixedHarmonics::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
+SC_MixedHarmonics_53X::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
   using namespace edm;
   using namespace std;
 
   edm::Handle<reco::VertexCollection> vertices;
-  iEvent.getByToken(vertexSrc_,vertices);
+  iEvent.getByLabel(vertexSrc_,vertices);
   double bestvz=-999.9, bestvx=-999.9, bestvy=-999.9;
   double bestvzError=-999.9, bestvxError=-999.9, bestvyError=-999.9;
   const reco::Vertex & vtx = (*vertices)[0];
@@ -110,10 +106,10 @@ SC_MixedHarmonics::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
   vtxZ->Fill( bestvz );
 
   Handle<CaloTowerCollection> towers;
-  iEvent.getByToken(towerSrc_, towers);
+  iEvent.getByLabel(towerSrc_, towers);
 
   Handle<reco::TrackCollection> tracks;
-  iEvent.getByToken(trackSrc_, tracks);
+  iEvent.getByLabel(trackSrc_, tracks);
 
   int nTracks = 0;
   for(unsigned it = 0; it < tracks->size(); it++){
@@ -358,18 +354,16 @@ calculate 4-particle cumulant
 }
 // ------------ method called once each job just before starting event loop  ------------
 void 
-SC_MixedHarmonics::beginJob()
+SC_MixedHarmonics_53X::beginJob()
 {
   edm::Service<TFileService> fs;
     
   TH1D::SetDefaultSumw2();
 
-  edm::FileInPath fip1("SC_MixedHarmonics/SC_MixedHarmonics/data/Hydjet_eff_mult_v1.root");
+  edm::FileInPath fip1("SC_MixedHarmonics_53X/SC_MixedHarmonics_53X/data/TrackCorrections_HIJING_538_OFFICIAL_Mar24.root");
   TFile f1(fip1.fullPath().c_str(),"READ");
-  for(int i = 0; i < 5; i++){
-     effTable[i] = (TH2D*)f1.Get(Form("rTotalEff3D_%d",i));
-  }
-
+  effTable = (TH2D*)f1.Get("rTotalEff3D");
+  
   Ntrk = fs->make<TH1D>("Ntrk",";Ntrk",5000,0,5000);
   vtxZ = fs->make<TH1D>("vtxZ",";vz", 400,-20,20);
   cbinHist = fs->make<TH1D>("cbinHist",";cbin",200,0,200);
@@ -386,7 +380,7 @@ SC_MixedHarmonics::beginJob()
 }
 
 TComplex 
-SC_MixedHarmonics::q_vector(double n, double p, double w, double phi) 
+SC_MixedHarmonics_53X::q_vector(double n, double p, double w, double phi) 
 {
   double term1 = pow(w,p);
   TComplex e(1, n*phi, 1);
@@ -395,35 +389,35 @@ SC_MixedHarmonics::q_vector(double n, double p, double w, double phi)
 
 // ------------ method called once each job just after ending the event loop  ------------
 void 
-SC_MixedHarmonics::endJob() 
+SC_MixedHarmonics_53X::endJob() 
 {
 }
 void 
-SC_MixedHarmonics::beginRun(edm::Run const&, edm::EventSetup const&)
+SC_MixedHarmonics_53X::beginRun(edm::Run const&, edm::EventSetup const&)
 {
 }
 
 // ------------ method called when ending the processing of a run  ------------
 void 
-SC_MixedHarmonics::endRun(edm::Run const&, edm::EventSetup const&)
+SC_MixedHarmonics_53X::endRun(edm::Run const&, edm::EventSetup const&)
 {
 }
 
 // ------------ method called when starting to processes a luminosity block  ------------
 void 
-SC_MixedHarmonics::beginLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&)
+SC_MixedHarmonics_53X::beginLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&)
 {
 }
 
 // ------------ method called when ending the processing of a luminosity block  ------------
 void 
-SC_MixedHarmonics::endLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&)
+SC_MixedHarmonics_53X::endLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&)
 {
 }
 // ------------ method fills 'descriptions' with the allowed parameters for the module  ------------
 void
-SC_MixedHarmonics::fillDescriptions(edm::ConfigurationDescriptions& descriptions) {
+SC_MixedHarmonics_53X::fillDescriptions(edm::ConfigurationDescriptions& descriptions) {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(SC_MixedHarmonics);
+DEFINE_FWK_MODULE(SC_MixedHarmonics_53X);
