@@ -11,8 +11,8 @@ void makeTGraph_PbPb_5TeV_Centrality(){
 
 	for(int i = 0; i < 5; i++){
 
-		file1[i] = new TFile(Form("../rootfiles/SC_MixedHarmonics_PbPb_m3n2_v2_%d.root", i+1));
-		file2[i] = new TFile(Form("../rootfiles/SC_MixedHarmonics_PbPb_m4n2_v2_%d.root", i+1));
+		file1[i] = new TFile(Form("../rootfiles/SC_MixedHarmonics_pPb_v1_%d.root", i+1));
+		//file2[i] = new TFile(Form("../rootfiles/SC_MixedHarmonics_PbPb_m4n2_v2_%d.root", i+1));
 	}
 
 	TH1D* c2_k_m3n2[5];
@@ -30,13 +30,13 @@ void makeTGraph_PbPb_5TeV_Centrality(){
 
 	for(int i = 0; i < 5; i++){
 
-		c2_k_m3n2[i] = (TH1D*) file1[i]->Get("ana/c2_k");
-		c2_m_m3n2[i] = (TH1D*) file1[i]->Get("ana/c2_m");
-		c4_m3n2[i] = (TH1D*) file1[i]->Get("ana/c4");
+		c2_k_m3n2[i] = (TH1D*) file1[i]->Get("ana_m3n2/c2_k");
+		c2_m_m3n2[i] = (TH1D*) file1[i]->Get("ana_m3n2/c2_m");
+		c4_m3n2[i] = (TH1D*) file1[i]->Get("ana_m3n2/c4");
 
-		c2_k_m4n2[i] = (TH1D*) file2[i]->Get("ana/c2_k");
-		c2_m_m4n2[i] = (TH1D*) file2[i]->Get("ana/c2_m");
-		c4_m4n2[i] = (TH1D*) file2[i]->Get("ana/c4");
+		c2_k_m4n2[i] = (TH1D*) file1[i]->Get("ana_m4n2/c2_k");
+		c2_m_m4n2[i] = (TH1D*) file1[i]->Get("ana_m4n2/c2_m");
+		c4_m4n2[i] = (TH1D*) file1[i]->Get("ana_m4n2/c4");
 
 		double fourP_m3n2 = c4_m3n2[i]->GetMean();
 		double fourP_m3n2_error = c4_m3n2[i]->GetMeanError();
