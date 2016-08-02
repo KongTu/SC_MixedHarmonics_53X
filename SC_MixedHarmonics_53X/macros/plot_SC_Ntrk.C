@@ -55,11 +55,25 @@ void plot_SC_Ntrk(){
     w2->AddEntry(gr1, "SC(3,2)", "P");
     w2->Draw("same");
 
-    TLatex* r4 = new TLatex(0.23, 0.87, "pPb #sqrt{s_{NN}} = 5.02 TeV");
+    TLatex* r3 = new TLatex(0.23, 0.87, "pPb #sqrt{s_{NN}} = 5.02 TeV");
+    r3->SetNDC();
+    r3->SetTextSize(23);
+    r3->SetTextFont(43);
+    r3->SetTextColor(kBlack);
+    r3->Draw("same");
+
+    TLatex* r4 = new TLatex(0.23, 0.82, "0.3 #leq p_{T} < 3.0 GeV");
     r4->SetNDC();
     r4->SetTextSize(23);
     r4->SetTextFont(43);
     r4->SetTextColor(kBlack);
     r4->Draw("same");
+
+    TLatex* r5 = new TLatex(0.23, 0.76, "|#eta| < 2,4");
+    r5->SetNDC();
+    r5->SetTextSize(23);
+    r5->SetTextFont(43);
+    r5->SetTextColor(kBlack);
+    r5->Draw("same");
 
 }
