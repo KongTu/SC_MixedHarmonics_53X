@@ -13,7 +13,7 @@ hltHM.andOr = cms.bool(True)
 hltHM.throw = cms.bool(False)
 				
 ana = cms.EDAnalyzer('SC_MixedHarmonics_53X',
-                                                  vertexSrc = cms.InputTag('offlinePrimaryVertices'),
+                                                  vertexSrc = cms.string('offlinePrimaryVertices'),
                 		  		  trackSrc = cms.InputTag('generalTracks'),
                                                   towerSrc = cms.InputTag("towerMaker"),
                                                   offlineDCA = cms.untracked.double(3.0),
