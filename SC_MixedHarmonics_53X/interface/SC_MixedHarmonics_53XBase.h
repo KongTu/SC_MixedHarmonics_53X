@@ -157,7 +157,7 @@ class SC_MixedHarmonics_53X : public edm::EDAnalyzer {
       virtual TComplex q_vector(double n, double p, double w, double phi);
 
       // ----------member data ---------------------------
-      edm::InputTag vertexSrc_;
+      std::string vertexSrc_;
       edm::InputTag trackSrc_;
       edm::InputTag towerSrc_;
 
