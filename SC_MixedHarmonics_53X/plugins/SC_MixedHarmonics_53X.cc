@@ -274,6 +274,8 @@ where Q_coefficient_power is used in the following names
   }
     
 
+  double multiplicity = (double) nTracks;
+
 /*
 calculate 2-particle cumulant with a gap
  */
@@ -301,24 +303,22 @@ calculate 2-particle cumulant with a gap
         D_2 = Q_eta_0_1[ieta]*Q_eta_0_1[jeta];
       }
       
-      if( useEtaGap_ ){
-        if(deltaEta < gapValue_) continue;
+      if(deltaEta >= gapValue_){
 
-        c2_k->Fill(N_2_k.Re()/D_2.Re(), D_2.Re());
-        c2_m->Fill(N_2_m.Re()/D_2.Re(), D_2.Re());
+        c2_Gap_n1->Fill(N_2_k.Re()/D_2.Re(), multiplicity, D_2.Re());
+        c2_Gap_n2->Fill(N_2_m.Re()/D_2.Re(), multiplicity, D_2.Re());
 
-        c2_k_imag->Fill(N_2_k.Im()/D_2.Re(), D_2.Re());
-        c2_m_imag->Fill(N_2_m.Im()/D_2.Re(), D_2.Re());
+        c2_Gap_n1_imag->Fill(N_2_k.Im()/D_2.Re(), multiplicity, D_2.Re());
+        c2_Gap_n2_imag->Fill(N_2_m.Im()/D_2.Re(), multiplicity, D_2.Re());
+
       }
-      else{
 
-        c2_k->Fill(N_2_k.Re()/D_2.Re(), D_2.Re());
-        c2_m->Fill(N_2_m.Re()/D_2.Re(), D_2.Re());
+      c2_noGap_n1->Fill(N_2_k.Re()/D_2.Re(), multiplicity, D_2.Re());
+      c2_noGap_n2->Fill(N_2_m.Re()/D_2.Re(), multiplicity, D_2.Re());
 
-        c2_k_imag->Fill(N_2_k.Im()/D_2.Re(), D_2.Re());
-        c2_m_imag->Fill(N_2_m.Im()/D_2.Re(), D_2.Re());
+      c2_noGap_n1_imag->Fill(N_2_k.Im()/D_2.Re(), multiplicity, D_2.Re());
+      c2_noGap_n2_imag->Fill(N_2_m.Im()/D_2.Re(), multiplicity, D_2.Re());
         
-      }
     }
   }
 
@@ -331,8 +331,8 @@ calculate 3-particle cumulant
   N_3 = Q_n1_1*Q_n2_1*Q_n3_1 - Q_n1n2_2*Q_n3_1 - Q_n2_1*Q_n1n3_2 - Q_n1_1*Q_n2n3_2 - Q_n1n2n3_3.operator*(2);
   D_3 = Q_0_1*Q_0_1*Q_0_1 - (Q_0_2*Q_0_1).operator*(3) + Q_0_3.operator*(2);
 
-  c3->Fill( N_3.Re()/D_3.Re(), D_3.Re());
-  c3_imag->Fill( N_3.Im()/D_3.Re(), D_3.Re());
+  c3->Fill( N_3.Re()/D_3.Re(), multiplicity, D_3.Re());
+  c3_imag->Fill( N_3.Im()/D_3.Re(), multiplicity, D_3.Re());
 /*
 calculate 4-particle cumulant
  */  
@@ -347,8 +347,9 @@ calculate 4-particle cumulant
 
   D_4 = Q_0_1*Q_0_1*Q_0_1*Q_0_1 - (Q_0_1*Q_0_1*Q_0_2).operator*(6) + (Q_0_2*Q_0_2).operator*(3) + (Q_0_1*Q_0_3).operator*(8) - Q_0_4.operator*(6);
  
-  c4->Fill( N_4.Re()/D_4.Re(), D_4.Re());
-  c4_imag->Fill( N_4.Im()/D_4.Re(), D_4.Re());
+  c4->Fill( N_4.Re()/D_4.Re(), multiplicity, D_4.Re());
+  c4_imag->Fill( N_4.Im()/D_4.Re(), multiplicity, D_4.Re());
+  c4_count->Fill( D_4.Re(), multiplicity);
 
 
 }
@@ -368,15 +369,23 @@ SC_MixedHarmonics_53X::beginJob()
   vtxZ = fs->make<TH1D>("vtxZ",";vz", 400,-20,20);
   cbinHist = fs->make<TH1D>("cbinHist",";cbin",200,0,200);
 
-  c2_k = fs->make<TH1D>("c2_k",";c2", 20000,-1,1);
-  c2_m = fs->make<TH1D>("c2_m",";c2", 20000,-1,1);
-  c3 = fs->make<TH1D>("c3",";c3", 20000,-1,1);
-  c4 = fs->make<TH1D>("c4",";c4", 20000,-1,1);
+  c2_Gap_n1 = fs->make<TH2D>("c2_Gap_n1",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c2_Gap_n2 = fs->make<TH2D>("c2_Gap_n2",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c2_noGap_n1 = fs->make<TH2D>("c2_noGap_n1",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c2_noGap_n2 = fs->make<TH2D>("c2_noGap_n2",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  
+  c3 = fs->make<TH2D>("c3",";c3", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c4 = fs->make<TH2D>("c4",";c4", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
 
-  c2_k_imag = fs->make<TH1D>("c2_k_imag",";c2", 20000,-1,1);
-  c2_m_imag = fs->make<TH1D>("c2_m_imag",";c2", 20000,-1,1);
-  c3_imag = fs->make<TH1D>("c3_imag",";c3", 20000,-1,1);
-  c4_imag = fs->make<TH1D>("c4_imag",";c4", 20000,-1,1);
+  c4_count = fs->make<TH2D>("c4_count",";c4_count", 2000,10000000,100000000000, Nmax_ - Nmin_, Nmin_, Nmax_);
+
+  c2_Gap_n1_imag = fs->make<TH2D>("c2_Gap_n1_imag",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c2_Gap_n2_imag = fs->make<TH2D>("c2_Gap_n2_imag",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c2_noGap_n1_imag = fs->make<TH2D>("c2_noGap_n1_imag",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c2_noGap_n2_imag = fs->make<TH2D>("c2_noGap_n2_imag",";c2", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+
+  c3_imag = fs->make<TH2D>("c3_imag",";c3", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
+  c4_imag = fs->make<TH2D>("c4_imag",";c4", 2000,-1,1, Nmax_ - Nmin_, Nmin_, Nmax_);
 }
 
 TComplex 
